@@ -4,28 +4,24 @@ import {images} from './../../constants';
 import {BsHexagon} from 'react-icons/bs';
 import {BiMenu} from 'react-icons/bi';
 import {HiX} from 'react-icons/hi';
-import {motion} from 'framer-motion';
+import {motion, AnimatePresence} from 'framer-motion';
 import './Navbar.scss';
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   const menuRef = useRef();
 
-  useEffect(() => {
-    const onBodyClick = (event) => {
-      if (menuRef.current.contains(event.target)) {
-        console.log('inside clicked');
-        return;
-      }
-      console.log('outside');
+  const onBodyClick = (event) => {
+    if (menuRef && !menuRef.current.contains(event.target)) {
       setToggle(false);
-    };
+      console.log('You clicked outside!');
+    }
+  };
 
-    document.body.addEventListener('click', onBodyClick, {capture: true});
+  useEffect(() => {
+    document.addEventListener('click', onBodyClick, true);
 
-    return document.body.removeEventListener('click', onBodyClick, {
-      capture: true,
-    });
+    return document.removeEventListener('click', onBodyClick, true);
   }, []);
 
   return (
@@ -49,35 +45,36 @@ export default function Navbar() {
             setToggle(true);
           }}
         />
-
-        {toggle && (
-          <motion.div
-            whileInView={{x: [300, 0]}}
-            transition={{duration: 0.85, ease: 'easeOut'}}
-          >
-            <HiX
-              onClick={() => {
-                console.log('X CLICKED');
-                setToggle(false);
-              }}
-            />
-            <ul>
-              {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item}`}
-                    onClick={() => {
-                      console.log('LINKED CLICKED');
-                      setToggle(false);
-                    }}
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
+        <AnimatePresence>
+          {toggle && (
+            <motion.div
+              whileInView={{x: [300, 0]}}
+              transition={{duration: 0.85, ease: 'easeOut'}}
+            >
+              <HiX
+                onClick={() => {
+                  console.log('X CLICKED');
+                  setToggle(false);
+                }}
+              />
+              <ul>
+                {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item}`}
+                      onClick={() => {
+                        console.log('LINKED CLICKED');
+                        setToggle(false);
+                      }}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
