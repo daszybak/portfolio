@@ -9,8 +9,12 @@
   background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  position: fixed;
+  position: relative;
   z-index: 2;
+}
+
+.app__sticky {
+  position: fixed;
 }
 
 .app__navbar-logo {

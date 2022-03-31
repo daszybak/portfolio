@@ -3,6 +3,10 @@
   font-family: var(--font-base);
 }
 
+.app__mg3rem {
+  margin-bottom: 3rem;
+}
+
 .app__mg6rem {
   margin-bottom: 6rem;
 }
@@ -20,10 +24,15 @@
 }
 
 .app__container {
-  width: 900px;
+  width: 50vw;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    width: 90vw;
+  }
 }
 
 .app__flex {

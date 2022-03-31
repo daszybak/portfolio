@@ -5,9 +5,11 @@ import {BsHexagon} from 'react-icons/bs';
 import {BiMenu} from 'react-icons/bi';
 import {HiX} from 'react-icons/hi';
 import {motion, AnimatePresence} from 'framer-motion';
+
 import './Navbar.scss';
 
-export default function Navbar() {
+export default function Navbar({inViewHeader, navRef}) {
+  console.log(inViewHeader);
   const [toggle, setToggle] = useState(false);
   const menuRef = useRef();
 
@@ -25,7 +27,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="app__navbar">
+    <nav
+      ref={navRef}
+      className={`app__navbar app__mg3rem ${
+        !inViewHeader ? 'app__sticky' : ''
+      }`}
+    >
       <motion.div
         className="app__navbar-logo"
         whileInView={{y: [-100, 0], opacity: [0, 1]}}
