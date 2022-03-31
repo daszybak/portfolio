@@ -3,6 +3,14 @@
   font-family: var(--font-base);
 }
 
+.app__mg6rem {
+  margin-bottom: 6rem;
+}
+
+.app__mg12rem {
+  margin-bottom: 12rem;
+}
+
 .app__whitebg {
   background-color: var(--white-color);
 }
@@ -12,9 +20,8 @@
 }
 
 .app__container {
-  width: 100%;
-  min-height: 100vh;
-
+  width: 900px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
@@ -54,7 +61,7 @@
 .head-text {
   font-size: 2.75rem;
   font-weight: 800;
-  text-align: center;
+  text-align: start;
   color: var(--black-color);
   text-transform: capitalize;
 
@@ -72,10 +79,10 @@
 }
 
 .p-text {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   text-align: left;
   color: var(--gray-color);
-  line-height: 1.5;
+  line-height: 1.7;
 
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem;
@@ -185,4 +192,16 @@
   .copyright {
     padding: 2rem;
   }
+}
+
+button {
+  border-radius: 4px;
+  padding: 1.25rem 1.75rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+  background-color: transparent;
+  border: 1px solid var(--white-color);
+  text-decoration: initial;
+  color: var(--white-color);
 }

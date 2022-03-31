@@ -11,30 +11,41 @@ export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   const menuRef = useRef();
 
-  const onBodyClick = (event) => {
-    if (menuRef && !menuRef.current.contains(event.target)) {
-      setToggle(false);
-      console.log('You clicked outside!');
-    }
-  };
-
   useEffect(() => {
-    document.addEventListener('click', onBodyClick, true);
+    const handleCloseMenu = (event) => {
+      if (menuRef.current && menuRef.current.contains(event.target)) return;
+      setToggle(false);
+    };
 
-    return document.removeEventListener('click', onBodyClick, true);
+    document.body.addEventListener('click', handleCloseMenu, true);
+
+    return () => {
+      document.body.removeEventListener('click', handleCloseMenu, true);
+    };
   }, []);
 
   return (
     <nav className="app__navbar">
-      <div className="app__navbar-logo">
+      <motion.div
+        className="app__navbar-logo"
+        whileInView={{y: [-100, 0], opacity: [0, 1]}}
+        transition={{duration: 0.5, delay: 0 * 0.1}}
+        viewport={{once: true}}
+      >
         <img src={images.logo} alt="logo" />
-      </div>
+      </motion.div>
       <ul className="app__navbar-links">
-        {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
+        {['home', 'about', 'work', 'skills', 'contact'].map((item, i) => (
+          <motion.li
+            className="app__flex p-text"
+            key={`link-${item}`}
+            whileInView={{y: [-100, 0], opacity: [0, 1]}}
+            transition={{duration: 0.5, delay: i * 0.1}}
+            viewport={{once: true}}
+          >
             <BsHexagon className="app__navbar-icon" />
             <a href={`#${item}`}>{item}</a>
-          </li>
+          </motion.li>
         ))}
       </ul>
 
@@ -48,8 +59,10 @@ export default function Navbar() {
         <AnimatePresence>
           {toggle && (
             <motion.div
-              whileInView={{x: [300, 0]}}
-              transition={{duration: 0.85, ease: 'easeOut'}}
+              key="menu"
+              initial={{x: '100%', opacity: 0}}
+              animate={{x: '5%', y: '-1%', opacity: 1}}
+              exit={{x: '100%', opacity: 0}}
             >
               <HiX
                 onClick={() => {
@@ -58,19 +71,21 @@ export default function Navbar() {
                 }}
               />
               <ul>
-                {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-                  <li key={item}>
-                    <a
-                      href={`#${item}`}
-                      onClick={() => {
-                        console.log('LINKED CLICKED');
-                        setToggle(false);
-                      }}
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                {['home', 'about', 'work', 'skills', 'contact'].map(
+                  (item, index) => (
+                    <li key={item}>
+                      <a
+                        href={`#${item}`}
+                        onClick={() => {
+                          console.log('LINKED CLICKED');
+                          setToggle(false);
+                        }}
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  )
+                )}
               </ul>
             </motion.div>
           )}

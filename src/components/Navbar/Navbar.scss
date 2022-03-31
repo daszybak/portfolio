@@ -1,6 +1,6 @@
 .app__navbar {
   width: 100%;
-
+  min-height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,7 +9,6 @@
   background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
   z-index: 2;
 }
@@ -24,8 +23,8 @@
     height: 60px;
 
     @media screen and (min-width: 2000px) {
-      width: 180px;
-      height: 180px;
+      width: 120px;
+      height: 120px;
     }
   }
 }

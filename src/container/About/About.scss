@@ -1,0 +1,23 @@
+.app__about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  p {
+    max-width: 60%;
+    flex-grow: 1;
+  }
+
+  .app__flex-image-text {
+    display: flex;
+
+    img {
+      max-width: 100%;
+      padding: 15px 30px;
+    }
+  }
+}
