@@ -13,10 +13,6 @@
   z-index: 2;
 }
 
-.app__sticky {
-  position: fixed;
-}
-
 .app__navbar-logo {
   display: flex;
   align-items: center;
@@ -97,12 +93,12 @@
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 10;
+    z-index: 999;
 
     padding: 1rem;
 
     width: 60%;
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
     justify-content: flex-end;
@@ -113,7 +109,6 @@
     background-size: cover;
     background-repeat: repeat;
 
-    /* top box shadow */
     box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
 
     svg {
