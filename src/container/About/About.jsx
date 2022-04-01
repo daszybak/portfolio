@@ -10,6 +10,7 @@ export default function About({aboutRef}) {
       whileInView={{opacity: [0, 1]}}
       transition={{duration: 0.5}}
       viewport={{once: true}}
+      id="about"
     >
       <div className="app__about" ref={aboutRef}>
         <h2 className="head-text">About Me</h2>

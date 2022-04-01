@@ -9,7 +9,6 @@ import {motion, AnimatePresence} from 'framer-motion';
 import './Navbar.scss';
 
 export default function Navbar({inViewHeader, navRef}) {
-  console.log(inViewHeader);
   const [toggle, setToggle] = useState(false);
   const menuRef = useRef();
 
@@ -27,12 +26,7 @@ export default function Navbar({inViewHeader, navRef}) {
   }, []);
 
   return (
-    <nav
-      ref={navRef}
-      className={`app__navbar app__mg3rem ${
-        !inViewHeader ? 'app__sticky' : ''
-      }`}
-    >
+    <nav className="app__navbar">
       <motion.div
         className="app__navbar-logo"
         whileInView={{y: [-100, 0], opacity: [0, 1]}}
@@ -41,6 +35,7 @@ export default function Navbar({inViewHeader, navRef}) {
       >
         <img src={images.logo} alt="logo" />
       </motion.div>
+
       <ul className="app__navbar-links">
         {['home', 'about', 'work', 'skills', 'contact'].map((item, i) => (
           <motion.li
@@ -78,21 +73,19 @@ export default function Navbar({inViewHeader, navRef}) {
                 }}
               />
               <ul>
-                {['home', 'about', 'work', 'skills', 'contact'].map(
-                  (item, index) => (
-                    <li key={item}>
-                      <a
-                        href={`#${item}`}
-                        onClick={() => {
-                          console.log('LINKED CLICKED');
-                          setToggle(false);
-                        }}
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  )
-                )}
+                {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item}`}
+                      onClick={() => {
+                        console.log('LINKED CLICKED');
+                        setToggle(false);
+                      }}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </motion.div>
           )}
