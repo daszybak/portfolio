@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 
 import {About, Footer, Header, Skills, Work} from './container';
-import {Navbar} from './components';
+import {Navbar, SocialMedia, Email} from './components';
 
 export default function App() {
   return (
@@ -13,6 +13,8 @@ export default function App() {
       <Work />
       <Skills />
       <Footer />
+      <SocialMedia />
+      <Email />
     </div>
   );
 }

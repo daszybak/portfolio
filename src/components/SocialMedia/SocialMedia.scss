@@ -1,0 +1,25 @@
+.nav__social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 5rem;
+  list-style: none;
+  gap: 1rem;
+
+  .nav__social-link {
+    width: 20px;
+    height: 20px;
+    stroke: var(--white-color) !important;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 5rem;
+    background-color: var(--white-color);
+  }
+}
