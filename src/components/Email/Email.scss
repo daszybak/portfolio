@@ -21,5 +21,14 @@
     transform: rotate(90deg) translateX(-50%);
     text-decoration: none;
     color: var(--white-color);
+    transition: all 300ms;
+
+    &:hover {
+      transform: translateY(-10px) rotate(90deg) translateX(-50%);
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    display: none;
   }
 }

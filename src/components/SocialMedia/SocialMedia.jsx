@@ -13,7 +13,11 @@ function SocialMedia() {
   return (
     <ul className="nav__social">
       <li>
-        <a href="https://github.com/daszybak">
+        <a
+          href="https://github.com/daszybak"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FiGithub className="nav__social-link" />
         </a>
       </li>
@@ -28,7 +32,11 @@ function SocialMedia() {
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/karlo-delmis-0715571b7/">
+        <a
+          href="https://www.linkedin.com/in/karlo-delmis-0715571b7/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FiLinkedin className="nav__social-link" />
         </a>
       </li>

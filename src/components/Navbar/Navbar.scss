@@ -56,12 +56,7 @@
       transition: all 300ms ease-in-out;
 
       &:hover {
-        color: var(--white-color);
-      }
-    }
-    &:hover {
-      .app__navbar-icon {
-        visibility: visible;
+        transform: translateY(-3px);
       }
     }
   }

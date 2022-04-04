@@ -18,3 +18,9 @@
   margin: 0;
   scroll-behavior: smooth;
 }
+
+html {
+  @media screen and (max-width: 900px) {
+    font-size: 80%;
+  }
+}

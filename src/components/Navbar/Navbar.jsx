@@ -1,7 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 
 import {images} from './../../constants';
-import {BsHexagon} from 'react-icons/bs';
 import {BiMenu} from 'react-icons/bi';
 import {HiX} from 'react-icons/hi';
 import {motion, AnimatePresence} from 'framer-motion';
@@ -45,7 +44,6 @@ export default function Navbar({inViewHeader, navRef}) {
             transition={{duration: 0.5, delay: i * 0.1}}
             viewport={{once: true}}
           >
-            <BsHexagon className="app__navbar-icon" />
             <a href={`#${item}`}>{item}</a>
           </motion.li>
         ))}
