@@ -1,18 +1,17 @@
 import {motion} from 'framer-motion';
-import {images} from '../../constants';
 import React from 'react';
 import './About.scss';
 
 export default function About({aboutRef}) {
   return (
     <motion.div
-      className="app__container app__mg12rem"
+      className="app__container"
       whileInView={{opacity: [0, 1]}}
       transition={{duration: 0.5}}
       viewport={{once: true}}
       id="about"
     >
-      <div className="app__about" ref={aboutRef}>
+      <div className="app__about app__mg12rem" ref={aboutRef}>
         <h2 className="head-text">About Me</h2>
         <div className="app__flex-image-text">
           <p className="p-text">
