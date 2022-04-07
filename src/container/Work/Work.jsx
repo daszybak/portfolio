@@ -8,7 +8,6 @@ import foodOrderAppImage from './../../assets/projects/food-order-app.png';
 import omnifoodImage from './../../assets/projects/omnifood.png';
 
 import './Work.scss';
-import {ThemeProvider} from 'react-bootstrap';
 
 const responsive = {
   desktop: {

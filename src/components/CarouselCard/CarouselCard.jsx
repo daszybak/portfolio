@@ -5,7 +5,8 @@ import {CarouselItem, Carousel} from 'react-bootstrap';
 import './carouselcard.scss';
 
 const CarouselCard = ({item}) => {
-  const {title, description, image, url, githubUrl} = item;
+  const {title, description, image} = item;
+  // const {githubUrl, url} = item;
   return (
     <CarouselItem className="carousel-card" interval={null}>
       <img className="d-block w-100" src={image} alt="First slide" />
