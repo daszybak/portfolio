@@ -10,6 +10,7 @@
 
   .app__flex-image-text {
     display: flex;
+    align-items: center;
 
     img {
       width: 100%;
@@ -27,16 +28,12 @@
       .app__image-box {
         display: flex;
         justify-content: center;
-
-        img {
-          width: 30%;
-          flex-grow: 1;
-        }
+        align-items: center;
       }
     }
-  }
 
-  @media screen and (max-width: 1200px) {
-    align-items: center;
+    @media screen and (min-width: 1200px) {
+      gap: 10rem;
+    }
   }
 }

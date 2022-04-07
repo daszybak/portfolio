@@ -3,13 +3,20 @@
 :root {
   --font-base: 'Roboto Slab', sans-serif;
 
-  --primary-color: #8892b0;
+  /* --primary-color: #8892b0;
   --secondary-color: rgba(2, 12, 27, 0.7);
   --black-color: #020c1b;
   --lightGray-color: #e4e4e4;
   --gray-color: #444;
   --brown-color: #009076;
-  --white-color: #e6f1ff;
+  --white-color: #e4e4e4; */
+
+  --primary-color: #4361ee; /*middle-blue-green*/
+  --secondary-color: #2b2b2b;
+  --black-color: rgb(29, 29, 29); /*black coffee*/
+  --lightGray-color: #e4e4e4;
+  --brown-color: #705d56ff; /*umber*/
+  --white-color: #ffffff; /*mint cream*/
 }
 
 * {
@@ -20,7 +27,11 @@
 }
 
 html {
-  @media screen and (max-width: 900px) {
+  font-size: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  html {
     font-size: 80%;
   }
 }

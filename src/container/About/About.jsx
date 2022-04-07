@@ -6,7 +6,7 @@ import './About.scss';
 export default function About({aboutRef}) {
   return (
     <motion.div
-      className="app__container"
+      className="app__container app__mg12rem"
       whileInView={{opacity: [0, 1]}}
       transition={{duration: 0.5}}
       viewport={{once: true}}
@@ -27,9 +27,9 @@ export default function About({aboutRef}) {
             projects has become a part of my identity. I am very eager to make
             web development my career.
           </p>
-          <div className="app__image-box">
+          {/* <div className="app__image-box">
             <img src={images.avatar} alt="Author" />
-          </div>
+          </div> */}
         </div>
       </div>
     </motion.div>
