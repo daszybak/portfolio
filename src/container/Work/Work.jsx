@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import forkifyImage from './../../assets/projects/forkify.png';
 import foodOrderAppImage from './../../assets/projects/food-order-app.png';
 import omnifoodImage from './../../assets/projects/omnifood.png';
+import movieSearchAppImage from './../../assets/projects/movie-search-app.png';
 
 import './Work.scss';
 
@@ -48,6 +49,14 @@ const work = [
     image: foodOrderAppImage,
     url: 'https:/karlo-food-order-app.netlify.app/',
     githubUrl: 'https://github.com/daszybak/Food-Order-App',
+  },
+  {
+    title: 'Movie Search App',
+    description:
+      'Searching movies using the https://www.themoviedb.org/settings/api. The app is created in React',
+    image: movieSearchAppImage,
+    url: 'https://karlo-movie-search.netlify.app/',
+    githubUrl: 'https://github.com/daszybak/Movie-Search-App',
   },
 ];
 
