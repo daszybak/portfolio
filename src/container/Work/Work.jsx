@@ -47,7 +47,7 @@ const work = [
     description:
       'Code along project from a React course. The app adds and removes orders from the cart.',
     image: foodOrderAppImage,
-    url: 'https:/karlo-food-order-app.netlify.app/',
+    url: 'https://karlo-food-order-app.netlify.app/',
     githubUrl: 'https://github.com/daszybak/Food-Order-App',
   },
   {
