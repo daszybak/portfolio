@@ -5,14 +5,13 @@ import './About.scss';
 export default function About({aboutRef}) {
   return (
     <>
-      <div className="anchor" id="about"></div>
       <motion.div
         className="app__container"
         whileInView={{opacity: [0, 1]}}
         transition={{duration: 0.5}}
         viewport={{once: true}}
       >
-        <div className="app__about app__mg12rem" ref={aboutRef}>
+        <div className="app__about app__mg12rem" ref={aboutRef} id="about">
           <h2 className="head-text">About Me</h2>
           <div className="app__flex-image-text">
             <p className="p-text">

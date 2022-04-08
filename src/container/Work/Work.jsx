@@ -74,8 +74,10 @@ export default function Work() {
   });
   return (
     <>
-      <div className="anchor" id="work"></div>
-      <div className="app__projects">
+      <a className="anchor" id="work" href="#work">
+        .
+      </a>
+      <div className="app__projects" id="work">
         <motion.div
           className="app__mg6rem"
           whileInView={{opacity: [0, 1]}}

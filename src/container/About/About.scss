@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  height: 100vh;
 
   h2 {
     margin-bottom: 2rem;
@@ -38,7 +39,7 @@
   }
 }
 
-div.anchor {
+a.anchor {
   display: block;
   position: relative;
   top: -8rem;
