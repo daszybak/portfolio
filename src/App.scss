@@ -213,4 +213,9 @@
   border: 1px solid var(--white-color);
   text-decoration: initial;
   color: var(--white-color);
+  transition: all 300ms;
+
+  &:hover {
+    color: var(--white-color);
+  }
 }

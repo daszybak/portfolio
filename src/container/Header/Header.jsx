@@ -3,14 +3,10 @@ import {motion} from 'framer-motion';
 
 import './Header.scss';
 
-export default function Header({headerRef}) {
+export default function Header() {
   return (
     <div>
-      <div
-        className="app__header app__flex app__mg12rem"
-        ref={headerRef}
-        id="home"
-      >
+      <div className="app__header app__flex app__mg12rem" id="home">
         <div className="app__header-h">
           <motion.p
             whileInView={{y: [100, 0], opacity: [0, 1]}}
