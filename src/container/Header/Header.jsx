@@ -21,7 +21,7 @@ export default function Header() {
             transition={{duration: 0.5, delay: 0.1}}
             viewport={{once: true}}
             className="head-text"
-            style={{color: 'var(--gray-color)'}}
+            style={{color: 'var(--white-color)'}}
           >
             Karlo.
           </motion.h1>
@@ -64,6 +64,10 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
             Curriculum Vitae
           </motion.a>
         </div>

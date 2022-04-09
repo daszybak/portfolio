@@ -12,10 +12,10 @@
   --white-color: #e4e4e4; */
 
   --primary-color: #4361ee; /*middle-blue-green*/
-  --secondary-color: #2b2b2b;
-  --black-color: rgb(29, 29, 29); /*black coffee*/
+  --secondary-color: rgb(0, 0, 0);
+  --black-color: rgb(0, 0, 0); /*black coffee*/
   --lightGray-color: #e4e4e4;
-  --brown-color: #705d56ff; /*umber*/
+  --brown-color: rgb(0, 0, 0); /*umber*/
   --white-color: #ffffff; /*mint cream*/
 }
 
