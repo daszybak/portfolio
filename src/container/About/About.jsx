@@ -5,6 +5,9 @@ import './About.scss';
 export default function About({aboutRef}) {
   return (
     <>
+      <a className="anchor" id="about" href="#about">
+        .
+      </a>
       <motion.div
         className="app__container"
         whileInView={{opacity: [0, 1]}}

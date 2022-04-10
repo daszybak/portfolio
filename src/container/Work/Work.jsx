@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {motion} from 'framer-motion';
 import {Carousel, CarouselItem} from 'react-bootstrap';
 import {RiGithubLine, RiExternalLinkLine} from 'react-icons/ri';
@@ -10,21 +10,6 @@ import omnifoodImage from './../../assets/projects/omnifood.png';
 import movieSearchAppImage from './../../assets/projects/movie-search-app.png';
 
 import './Work.scss';
-
-const responsive = {
-  desktop: {
-    breakpoint: {max: 3000, min: 1024},
-    items: 3,
-  },
-  tablet: {
-    breakpoint: {max: 1024, min: 464},
-    items: 2,
-  },
-  mobile: {
-    breakpoint: {max: 464, min: 0},
-    items: 1,
-  },
-};
 
 const work = [
   {
@@ -61,11 +46,18 @@ const work = [
 ];
 
 export default function Work() {
+  const [width, setWidth] = useState();
+
+  useEffect(() => {
+    setWidth(document.body.clientWidth);
+    console.log(width);
+  }, [width]);
+
   const renderedCarouselItems = work.map((item) => {
     const {title, description, image, url, githubUrl} = item;
     return (
       <CarouselItem interval={null} key={title}>
-        <img className="d-block w-100 " src={image} alt={description} />
+        <img className="d-block w-100" src={image} alt={description} />
         <Carousel.Caption className="carousel-card__catption">
           <h3>{title}</h3>
           <span className="carousel-card__fixed">
@@ -76,7 +68,7 @@ export default function Work() {
               <RiGithubLine />
             </a>
           </span>
-          <p>{description}</p>
+          {width <= 900 ? null : <p>{description}</p>}
         </Carousel.Caption>
       </CarouselItem>
     );
@@ -86,7 +78,7 @@ export default function Work() {
       <a className="anchor" id="work" href="#work">
         .
       </a>
-      <div className="app__projects" id="work">
+      <div className="app__projects app__mg12rem" id="work">
         <motion.div
           className="app__mg6rem"
           whileInView={{opacity: [0, 1]}}
@@ -99,7 +91,7 @@ export default function Work() {
               Projects
             </h2>
 
-            <Carousel interval={null} controls={true} responsive={responsive}>
+            <Carousel interval={null} controls={true} touch={true}>
               {renderedCarouselItems}
             </Carousel>
           </div>

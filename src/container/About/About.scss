@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: 100vh;
+  width: 1200px;
 
   h2 {
     margin-bottom: 2rem;
@@ -19,29 +19,12 @@
       flex-shrink: 0;
       justify-self: center;
     }
-
-    @media screen and (max-width: 1200px) {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 90vw;
-
-      .app__image-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-
-    @media screen and (min-width: 1200px) {
-      gap: 10rem;
-    }
   }
 }
 
 a.anchor {
   display: block;
   position: relative;
-  top: -8rem;
+  top: -4rem;
   visibility: hidden;
 }
