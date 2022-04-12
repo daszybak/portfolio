@@ -30,7 +30,7 @@ const work = [
   {
     title: 'Food Order App',
     description:
-      'Code along project from a React course. The app adds and removes orders from the cart.',
+      'Code along project from a React course. The app fetches the meals from Firebase and enables the user to send to order to Firebase',
     image: foodOrderAppImage,
     url: 'https://karlo-food-order-app.netlify.app/',
     githubUrl: 'https://github.com/daszybak/Food-Order-App',
