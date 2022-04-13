@@ -50,7 +50,6 @@ export default function Work() {
 
   useEffect(() => {
     setWidth(document.body.clientWidth);
-    console.log(width);
   }, [width]);
 
   const renderedCarouselItems = work.map((item) => {
