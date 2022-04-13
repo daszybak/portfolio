@@ -37,7 +37,7 @@ const Contact = () => {
           message: '',
         }}
         validationSchema={contactFormSchema}
-        onSubmit={async (values, {setSubmitting}) => {
+        onSubmit={async (values, {setSubmitting, resetForm}) => {
           setSubmitting(true);
           try {
             await axios.post(
@@ -57,6 +57,7 @@ const Contact = () => {
           }
 
           setSubmitting(false);
+          resetForm();
           alert(
             'Thank you for contacting me! I will get back to you as fast as I can!'
           );
