@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 
-import {About, Footer, Header, Skills, Work} from './container';
+import {About, Header, Work, Contact} from './container';
 import {Navbar, SocialMedia, Email} from './components';
 
 export default function App() {
@@ -11,8 +11,7 @@ export default function App() {
       <Header />
       <About />
       <Work />
-      <Skills />
-      <Footer />
+      <Contact />
       <SocialMedia />
       <Email />
     </div>
