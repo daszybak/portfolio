@@ -14,7 +14,7 @@ const work = [
 	{
 		title: 'Parametrik',
 		description:
-			'Freelance project for an engineering company in Zagreb, which develops projects for the largest automotive companies.',
+			'Freelance project for an engineering company in Zagreb, which develops projects for the largest automotive companies. The website was build in NextJS using and also Sanity CMS for project section.',
 		image: parametrik,
 		url: 'https://www.parametrik-engineering.com/',
 		githubUrl: 'https://github.com/daszybak/parametrik',
